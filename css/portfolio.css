@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap');
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 3.5rem;
+    color: #3fd7eb;
+    font-weight: 800;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+nav {
+    display: flex;
+    gap: 4rem;
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: #666;
+    font-weight: 500;
+    transition: 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #3fd7eb;
+    transition: width 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #3fd7eb;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2.5rem;
+    background: none;
+    color: #3fd7eb;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.menu-toggle:hover {
+    transform: rotate(90deg);
+}
+
+/* Sections Common Styles */
+.section {
+    min-height: 100vh;
+    padding: 10rem 9% 5rem;
+    display: flex;
+    align-items: center;
+}
+#home > .container
+{
+    width: 100%;
+    max-width: 1500px;
+    padding: 0 2rem;
+}
+
+#services > .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+#education > .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+/*achievement Section*/
+/* Achievement Section - Đã chỉnh sửa */
+#achievement > .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.achievement-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.box {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.box:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(63, 215, 235, 0.15);
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #3fd7eb, #4bc0d9);
+    z-index: 2;
+}
+
+.box img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.box:hover img {
+    transform: scale(1.05);
+}
+
+.box-content {
+    padding: 2.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-name {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    text-align: left;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.title-name::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 4px;
+    height: 2rem;
+    background-color: #3fd7eb;
+    border-radius: 2px;
+}
+
+.title-desc {
+    font-size: 1.6rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.achievement-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.4rem;
+    color: #007a8a;
+    background: rgba(63, 215, 235, 0.1);
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    width: fit-content;
+}
+
+.achievement-date i {
+    font-size: 1.6rem;
+}
+
+.achievement-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.tag {
+    font-size: 1.2rem;
+    padding: 0.4rem 1.2rem;
+    background: rgba(63, 215, 235, 0.08);
+    color: #3fd7eb;
+    border-radius: 50px;
+    font-weight: 500;
+    border: 1px solid rgba(63, 215, 235, 0.2);
+}
+.section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.section-header h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3fd7eb, #4bc0d9);
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-size: 1.8rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+
+/* Achievement header style */
+
+
+h2 {
+    font-size: 4.5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    color: #3fd7eb;
+}
+
+/* Home Section */
+.home {
+    background-color: #ffffff;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.home-img {
+    flex: 1;
+}
+
+.home-img img {
+    width: 600px;
+    height: 600px;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 30%;
+    box-shadow: 0 0 40px rgba(63, 215, 235, 0.4);
+    transition: 0.4s ease;
+}
+
+.home-img img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 60px rgba(63, 215, 235, 0.6);
+}
+
+.home-text {
+    flex: 1;
+}
+
+.home-text h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.home-text h1 span {
+    color: #3fd7eb;
+}
+
+.typing-text {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #555;
+    min-height: 4rem;
+}
+
+.typing-text {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #555;
+    min-height: 4rem;
+    overflow: hidden; /* Quan trọng: ẩn phần thừa */
+    white-space: nowrap; /* Không xuống dòng */
+}
+
+.typing-text span {
+    color: #3fd7eb;
+    position: relative;
+    display: inline-block; /* Để chứa pseudo-element */
+}
+
+/* Dòng chữ thay đổi */
+.typing-text span::before {
+    content: "Kỹ Sư Phần Mềm";
+    color: #3fd7eb;
+    animation: words 20s infinite;
+    display: inline-block;
+}
+
+/* Thanh nhấp nháy (blinking cursor) */
+.typing-text span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -8px;
+    width: 3px;
+    height: 80%; /* Cao hơn chữ một chút */
+    background-color: #3fd7eb;
+    animation: cursorBlink 0.8s infinite;
+    /* Xóa background-color trắng cũ */
+}
+
+.home-text p {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+.highlight {
+    color: #3fd7eb;
+    font-weight: 600;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.contact-info p {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #555;
+}
+
+.contact-info i {
+    color: #3fd7eb;
+    font-size: 2rem;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: transparent;
+    border: 2px solid #3fd7eb;
+    border-radius: 50%;
+    font-size: 2.2rem;
+    color: #3fd7eb;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #3fd7eb;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(63, 215, 235, 0.3);
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 1.5rem 3.5rem;
+    background-color: white;
+    border: 2px solid #3fd7eb;
+    border-radius: 5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #3fd7eb;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #3fd7eb;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(63, 215, 235, 0.4);
+}
+
+/* Services, Education, achievement Sections */
+.services, .achievement {
+    background-color: #f8f9fa;
+}
+.education
+{
+    background-color: #ffffff;
+}
+
+.section-content {
+    font-size: 1.8rem;
+    text-align: center;
+    color: #666;
+}
+
+.section-content p {
+    margin-bottom: 3rem;
+}
+
+/* Animations */
+/* Animation cho cursor nhấp nháy */
+@keyframes cursorBlink {
+    0%, 100% { 
+        opacity: 1; 
+        transform: translateY(-50%) scaleY(1);
+    }
+    50% { 
+        opacity: 0; 
+        transform: translateY(-50%) scaleY(0.8);
+    }
+}
+@keyframes words {
+    0%, 16% {
+        content: "Kỹ Sư Phần Mềm";
+        opacity: 1;
+    }
+    17%, 19% {
+        content: "";
+        opacity: 0; 
+    }
+    20%, 36% {
+        content: "Nhà Sáng Tạo Nội Dung";
+        opacity: 1;
+    }
+    37%, 39% {
+        content: "";
+        opacity: 0;
+    }
+    40%, 56% {
+        content: "Thiết Kế Web";
+        opacity: 1;
+    }
+    57%, 59% {
+        content: "";
+        opacity: 0;
+    }
+    60%, 76% {
+        content: "Gia Sư Tin Học";
+        opacity: 1;
+    }
+    77%, 79% {
+        content: "";
+        opacity: 0;
+    }
+    80%, 96% {
+        content: "Biên Tập Viên";
+        opacity: 1;
+    }
+    97%, 99% {
+        content: "";
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px; /* Bù cho header fixed */
+    }
+}
+
+/* Animation cho active section */
+section {
+    scroll-margin-top: 80px; 
+}
+
