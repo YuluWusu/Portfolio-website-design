@@ -25,7 +25,7 @@ JavaScript
 Installation and Usage
 To view the website locally on your machine, follow these steps:
 
-Clone the repository: git clone https://github.com/YOUR_USERNAME/portfolio-website-design.git
+Clone the repository: git clone https://github.com/YuluWusu/portfolio-website-design
 
 Navigate to the project directory: cd portfolio-website-design
 
