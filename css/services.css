@@ -1,0 +1,361 @@
+.section-services {
+    min-height: 100vh;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    align-items: center;
+}
+#services > .container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0 2rem; 
+}
+.services-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.service-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    grid-column: span 1;
+    min-width: 0;
+    gap: 3rem;
+    padding: 2.5rem;
+    background: white;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.service-row:hover {
+    transform: translateX(5px);
+    background: white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border-left-color: #3fd7eb;
+}
+
+.service-icon {
+    flex: 0 0 auto;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #3fd7eb, #4bc0d9);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: white;
+    box-shadow: 0 5px 15px rgba(63, 215, 235, 0.3);
+}
+
+.service-content {
+    flex: 1;
+}
+
+.service-content h3 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+.service-content p {
+    font-size: 1.6rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.service-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.feature-tag {
+    font-size: 1.4rem;
+    padding: 0.5rem 1.2rem;
+    background: rgba(63, 215, 235, 0.1);
+    color: #3fd7eb;
+    border-radius: 50px;
+}
+.feature-tag-paused
+{
+    font-size: 1.4rem;
+    padding: 0.5rem 1.2rem;
+    background: rgba(219, 219, 219, 0.1);
+    color: #b1b1b1;
+    border-radius: 50px;
+}
+
+.service-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.8rem;
+    min-width: 150px;
+}
+
+.service-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #3fd7eb;
+    text-align: right;
+}
+
+.service-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.2rem;
+    background: rgba(63, 215, 235, 0.1);
+    color: #3fd7eb;
+    border-radius: 50px;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.service-status i {
+    font-size: 1.4rem;
+}
+
+.service-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-contact, .btn-register {
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+.btn-contact-paused, .btn-register-paused
+{
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: not-allowed;
+    transition: all 0.3s ease;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+.btn-contact-paused
+{
+    background: rgba(176, 176, 176, 0.25) !important;
+    color: gray;
+    border: 1px solid rgba(176, 176, 176, 0.25);   
+}
+.btn-register-paused
+{
+    background: rgba(176, 176, 176, 0.25) !important;
+    color: gray;
+    border: 1px solid rgba(176, 176, 176, 0.25);   
+}
+
+.btn-contact {
+    background: rgba(63, 215, 235, 0.1);
+    color: #3fd7eb;
+    border: 1px solid rgba(63, 215, 235, 0.3);
+}
+
+.btn-contact:hover {
+    background: #3fd7eb;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(63, 215, 235, 0.3);
+}
+
+.btn-register {
+    background: linear-gradient(135deg, #3fd7eb, #4bc0d9);
+    color: white;
+    animation: pulse-cyan 2s infinite;
+}
+
+.btn-register:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(63, 215, 235, 0.4);
+}
+
+.status-active {
+    background: rgba(63, 215, 235, 0.1);
+    color: #3fd7eb;
+}
+
+/* ===== 2. TRẠNG THÁI VÀNG - Liên hệ biết giá ===== */
+
+.service-contact:hover {
+    border-left-color: #3fd7eb;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08)
+}
+
+.price-contact {
+    color: #ff9800 !important; /* Màu cam đậm */
+    font-weight: 700;
+}
+
+.status-contact {
+    background: rgba(255, 183, 77, 0.15);
+    color: #ff9800;
+    border: 1px solid rgba(255, 183, 77, 0.3);
+}
+
+.btn-contact-yellow {
+    background: linear-gradient(135deg, #3fd7eb, #3fd7eb) !important;
+    color: white !important;
+    animation: pulse-cyan 2s infinite;
+}
+
+.btn-contact-yellow-alt {
+    background: rgba(255, 183, 77, 0.15);
+    color: #ff9800;
+    border: 1px solid rgba(255, 183, 77, 0.3);
+}
+
+.btn-contact-yellow:hover {
+    background: linear-gradient(135deg, #ff9800, #ff9800) !important;
+    box-shadow: 0 5px 15px rgba(255, 152, 0, 0.3) !important;
+}
+
+.btn-contact-yellow-alt:hover {
+    background: #ff9800 !important;
+    color: white !important;
+}
+
+@keyframes pulse-cyan {
+    0% { box-shadow: 0 0 0 0 rgba(63, 215, 235, 0.3); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 183, 77, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 183, 77, 0); }
+}
+
+/* ===== 3. TRẠNG THÁI XÁM - Tạm dừng nhận ===== */
+.service-paused {
+    opacity: 0.85;
+    border-left-color: #b0b0b0;
+    filter: grayscale(20%);
+}
+
+.service-paused:hover {
+    transform: none !important; /* Không dịch chuyển */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05) !important;
+    border-left-color: #b0b0b0;
+    cursor: not-allowed;
+}
+
+.service-paused .service-icon {
+    background: linear-gradient(135deg, #b0b0b0, #909090) !important;
+    box-shadow: 0 5px 15px rgba(176, 176, 176, 0.2) !important;
+    opacity: 0.9;
+}
+
+.price-paused {
+    color: #e57373 !important; /* Màu đỏ nhạt */
+    font-weight: 600;
+}
+
+.status-paused {
+    background: rgba(176, 176, 176, 0.1);
+    color: #757575;
+    border: 1px solid rgba(176, 176, 176, 0.2);
+}
+
+/* Màu đỏ nhạt cho chữ "Liên hệ báo giá" trong trạng thái tạm dừng */
+.service-paused .service-price {
+    color: #ef9a9a !important; /* Màu đỏ nhạt hơn */
+}
+
+/* Điều chỉnh màu đỏ nhạt cho icon tạm dừng */
+.service-paused .service-status i {
+    color: #e57373 !important; /* Màu đỏ nhạt cho icon */
+}
+
+
+/* Responsive */
+@media (max-width: 992px) {
+    .services-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+
+    .service-row {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .service-meta {
+        align-items: center;
+        width: 100%;
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid #eee;
+    }
+    
+    .service-price {
+        text-align: center;
+    }
+    
+    .service-features {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+    .service-row {
+        padding: 2rem;
+    }
+    
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2.2rem;
+    }
+    
+    .service-content h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+    .service-features {
+        gap: 0.8rem;
+    }
+    
+    .feature-tag {
+        font-size: 1.3rem;
+        padding: 0.4rem 1rem;
+    }
+}

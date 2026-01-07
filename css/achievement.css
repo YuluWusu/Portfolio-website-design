@@ -1,0 +1,167 @@
+/* Achievement Section - Đã chỉnh sửa */
+#achievement > .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.achievement-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.box {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.box:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(63, 215, 235, 0.15);
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #3fd7eb, #4bc0d9);
+    z-index: 2;
+}
+
+.box img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.box:hover img {
+    transform: scale(1.05);
+}
+
+.box-content {
+    padding: 2.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-name {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    text-align: left;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.title-name::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 4px;
+    height: 2rem;
+    background-color: #3fd7eb;
+    border-radius: 2px;
+}
+
+.title-desc {
+    font-size: 1.6rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.achievement-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.4rem;
+    color: #007a8a;
+    background: rgba(63, 215, 235, 0.1);
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    width: fit-content;
+}
+
+.achievement-date i {
+    font-size: 1.6rem;
+}
+
+.achievement-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.tag {
+    font-size: 1.2rem;
+    padding: 0.4rem 1.2rem;
+    background: rgba(63, 215, 235, 0.08);
+    color: #3fd7eb;
+    border-radius: 50px;
+    font-weight: 500;
+    border: 1px solid rgba(63, 215, 235, 0.2);
+}
+.section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.section-header h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3fd7eb, #4bc0d9);
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-size: 1.8rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+
+/* Achievement header style */
+
+
+h2 {
+    font-size: 4.5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    color: #3fd7eb;
+}
