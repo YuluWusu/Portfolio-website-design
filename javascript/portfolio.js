@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Mobile Menu Toggle
     menuToggle.addEventListener('click', function() {
-        navbar.classList.toggle('active');
-        menuToggle.innerHTML = navbar.classList.contains('active') 
-            ? '<i class="fas fa-times"></i>' 
-            : '<i class="fas fa-bars"></i>';
-    });
+    navbar.classList.toggle('active');
+    
+    // Thay vì thay đổi HTML, toggle class
+    menuToggle.classList.toggle('active');
+});
     
     // Smooth scroll function
     function smoothScrollTo(targetElement, duration = 800) {
