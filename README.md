@@ -1,6 +1,6 @@
 # Portfolio Website Template - Professional Personal Website
 
-![Portfolio Preview](https://img.shields.io/badge/Responsive-Yes-success) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black) ![License](https://img.shields.io/badge/License-MIT-blue)
+![Portfolio Preview](https://img.shields.io/badge/Responsive-Yes-success) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 
 A modern, fully responsive portfolio website template built with pure HTML, CSS, and JavaScript. Perfect for developers, designers, students, and professionals to showcase their skills, projects, and achievements.
 
