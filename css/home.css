@@ -138,6 +138,7 @@ nav a.active::after {
     object-fit: cover;
     border-radius: 30%;
     box-shadow: 0 0 40px rgba(63, 215, 235, 0.4);
+    aspect-ratio: 1 / 1 !important; /* QUAN TRỌNG: Tỷ lệ 1:1 */
     transition: 0.4s ease;
 }
 
@@ -365,4 +366,5 @@ nav a.active::after {
 section {
     scroll-margin-top: 80px; 
 }
+
 
