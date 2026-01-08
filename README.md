@@ -286,5 +286,5 @@ Want to be featured? Share your customized version:
 
 ![GitHub stars](https://img.shields.io/github/stars/YuluWusu/portfolio-template?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/YuluWusu/portfolio-template?style=social)
-![GitHub issues](https://img.shields.io/github/issues/YuluWusu/portfolio-template)
-![GitHub last commit](https://img.shields.io/github/last-commit/YuluWusu/portfolio-template)
+![GitHub issues]([https://img.shields.io/github/issues/YuluWusu/portfolio-template](https://github.com/YuluWusu/portfolio-website-design))
+![GitHub last commit]([https://img.shields.io/github/last-commit/YuluWusu/portfolio-template](https://github.com/YuluWusu/portfolio-website-design))
