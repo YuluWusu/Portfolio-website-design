@@ -371,3 +371,295 @@
         padding: 1.5rem;
     }
 }
+
+/* ============================================
+   FIX FOR MOBILE VIEWPORT ISSUES
+   ============================================ */
+
+/* Reset mặc định cho mobile */
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+/* ---------- 480px (Mobile) ---------- */
+@media (max-width: 480px) {
+    /* Global fixes */
+    html {
+        font-size: 62.5% !important; /* Thay đổi từ 50% */
+    }
+    
+    body {
+        min-width: 320px;
+        overflow-x: hidden;
+    }
+    
+    /* Header */
+    header {
+        padding: 1.5rem 5%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        background: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Container fixes */
+    .container {
+        width: 100%;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+    
+    /* Section fixes */
+    .section {
+        padding: 10rem 15px 3rem !important; /* Thêm !important để override */
+        min-height: auto !important;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .section-education {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        min-height: auto;
+    }
+    
+    /* Home Section fixes */
+    .home {
+        padding-top: 8rem !important;
+    }
+    
+    .home-content {
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .home-img {
+        scale: 0.6;
+        margin: 0 auto 2rem;
+    }
+    
+    .home-text {
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .home-text h1 {
+        font-size: 3rem !important;
+        line-height: 1.2;
+    }
+    
+    .typing-text {
+        font-size: 1.8rem !important;
+    }
+    
+    /* Education Section fixes */
+    .education {
+        padding: 3rem 0 !important;
+    }
+    
+    .cv-container {
+        width: 100%;
+        margin: 1rem auto;
+        padding: 0;
+    }
+    
+    .cv-content {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .cv-left, 
+    .cv-right {
+        width: 100% !important;
+        padding: 2rem 1.5rem !important;
+        margin: 0;
+        border-radius: 10px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .profile-image {
+        width: 150px !important;
+        height: 150px !important;
+        margin: 0 auto 2rem !important;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+    
+    .courses-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .course-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+    
+    /* Achievement Section fixes */
+    .achievement-content {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+    }
+    
+    .box {
+        width: 100%;
+        margin: 0 auto 2rem;
+    }
+    
+    .box img {
+        height: 180px;
+        object-fit: cover;
+    }
+    
+    /* Services Section fixes */
+    .services-content {
+        width: 100%;
+        padding: 0 5px;
+    }
+    
+    .service-row {
+        width: 100%;
+        padding: 1.5rem;
+        margin: 0 auto 1.5rem;
+    }
+    
+    .service-features {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    /* Navigation fixes */
+    nav {
+        width: 100% !important;
+        right: -100% !important;
+    }
+    
+    nav.active {
+        right: 0 !important;
+        width: 100% !important;
+    }
+    
+    /* Button fixes */
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+        display: block;
+        padding: 1rem 2rem;
+        font-size: 1.6rem;
+    }
+    
+    /* Social icons fixes */
+    .social-icons {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .social-icons a {
+        width: 45px;
+        height: 45px;
+        font-size: 1.8rem;
+    }
+    
+    /* Contact info fixes */
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .contact-info p {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+}
+
+/* ---------- 360px (Very Small Mobile) ---------- */
+@media (max-width: 360px) {
+    html {
+        font-size: 55% !important;
+    }
+    
+    .home-img {
+        scale: 0.5;
+    }
+    
+    .home-text h1 {
+        font-size: 2.6rem !important;
+    }
+    
+    .profile-image {
+        width: 130px !important;
+        height: 130px !important;
+    }
+    
+    .cv-left,
+    .cv-right {
+        padding: 1.5rem 1rem !important;
+    }
+    
+    .service-row {
+        padding: 1.2rem;
+    }
+    
+    .box-content {
+        padding: 1.2rem;
+    }
+}
+
+/* ---------- FIX FOR SPECIFIC IOS ISSUES ---------- */
+@supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */
+    .section {
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .home-img img {
+        max-height: 60vh;
+    }
+}
+
+/* ---------- FIX FOR HORIZONTAL SCROLLING ---------- */
+@media (max-width: 480px) {
+    .container,
+    .section,
+    .cv-container,
+    .cv-content,
+    .cv-left,
+    .cv-right,
+    .achievement-content,
+    .services-content,
+    .home-content {
+        overflow-x: hidden !important;
+    }
+    
+    /* Force single column layout */
+    .home-content,
+    .cv-content,
+    .achievement-content,
+    .services-content {
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+    }
+}
