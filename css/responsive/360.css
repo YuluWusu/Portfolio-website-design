@@ -1,0 +1,276 @@
+/* ============================================
+   360px - SMALL MOBILE RESPONSIVE - FIXED
+   ============================================ */
+
+@media (max-width: 360px) {
+    /* Global - ĐIỀU CHỈNH LẠI FONT SIZE */
+    html {
+        font-size: 50% !important; /* Giảm từ 55% */
+    }
+    
+    body {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+    }
+    
+/* ========== SERVICES SECTION - RỘNG GẦN CHẠM RÌA ========== */
+    .services-content {
+        width: 100% !important;
+        padding: 0 2px !important; /* Giảm padding tối đa */
+        gap: 2rem !important;
+    }
+    
+    .service-row {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 1.5rem 1.2rem !important; /* Giảm padding ngang */
+        margin: 0 auto 1.2rem !important;
+        border-radius: 10px !important;
+        /* Xóa margin/padding không cần thiết */
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    /* Dịch vụ chiếm gần hết chiều rộng */
+    .service-content {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    .service-content h3 {
+        font-size: 1.9rem !important;
+        margin-bottom: 0.8rem !important;
+    }
+    
+    .service-content p {
+        font-size: 1.4rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .service-features {
+        justify-content: flex-start !important; /* Căn trái để tiết kiệm space */
+        gap: 0.6rem !important;
+        flex-wrap: wrap !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .feature-tag {
+        font-size: 1.2rem !important;
+        padding: 0.4rem 0.8rem !important;
+        white-space: nowrap !important;
+    }
+    
+    .service-meta {
+        width: 100% !important;
+        padding: 1rem 0 0 0 !important;
+        margin-top: 1rem !important;
+        border-top: 1px solid #eee !important;
+    }
+    
+    .service-price {
+        font-size: 1.6rem !important;
+        font-weight: 700 !important;
+        margin-bottom: 0.8rem !important;
+    }
+    
+    .service-actions {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.8rem !important;
+        width: 100% !important;
+    }
+    
+    /* XÓA TẤT CẢ TRANSFORM VÀ SCALE */
+    .home-img,
+    .home-img * {
+        transform: none !important;
+        -webkit-transform: none !important;
+        scale: 1 !important;
+        -webkit-scale: 1 !important;
+    }
+    
+    /* Home Section - HÌNH VUÔNG CỐ ĐỊNH */
+    .home-img {
+        width: 250px !important;    /* GIẢM từ 280px */
+        height: 250px !important;   /* PHẢI BẰNG width */
+        min-width: 250px !important;
+        min-height: 250px !important;
+        max-width: 250px !important;
+        max-height: 250px !important;
+        margin: 0 auto 1.5rem !important;
+        display: block !important;
+        position: relative !important;
+        overflow: hidden !important;
+        border-radius: 30% !important;
+        box-shadow: 0 0 20px rgba(63, 215, 235, 0.4) !important;
+    }
+    
+    .home-img img {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        width: 100% !important;
+        height: 100% !important;
+        transform: translate(-50%, -50%) !important;
+        -webkit-transform: translate(-50%, -50%) !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        border-radius: inherit !important;
+        box-shadow: none !important; /* Xóa shadow trên img vì đã có trên container */
+    }
+    
+    /* Home text adjustments */
+    .home-text h1 {
+        font-size: 2.8rem !important; /* Tăng từ 2.6rem */
+        line-height: 1.3;
+    }
+    
+    .typing-text {
+        font-size: 1.8rem !important;
+    }
+    
+    /* Education Section */
+    .education {
+        padding: 2rem 0 !important;
+    }
+    
+    .cv-left,
+    .cv-right {
+        padding: 1.8rem 1.2rem !important;
+        margin-bottom: 1.5rem;
+        border-radius: 12px;
+    }
+    
+    .profile-image {
+        width: 140px !important;  /* Tăng từ 130px */
+        height: 140px !important;
+        border-width: 4px;
+    }
+    
+    /* Services Section */
+    .service-row {
+        padding: 1.5rem !important;
+        margin-bottom: 1.2rem;
+    }
+    
+    .service-icon {
+        width: 55px !important;
+        height: 55px !important;
+        font-size: 2rem !important;
+    }
+    
+    /* Achievement Section */
+    .box-content {
+        padding: 1.5rem !important;
+    }
+    
+    .title-name {
+        font-size: 1.9rem !important;
+    }
+    
+    /* Button fixes */
+    .btn {
+        width: 90% !important;
+        max-width: 260px !important;
+        margin: 0 auto !important;
+        display: block !important;
+        padding: 1rem 2rem !important;
+        font-size: 1.5rem !important;
+    }
+    
+    /* Social icons */
+    .social-icons {
+        justify-content: center;
+        gap: 1rem;
+        margin: 1.5rem 0;
+    }
+    
+    .social-icons a {
+        width: 42px !important;
+        height: 42px !important;
+        font-size: 1.8rem !important;
+    }
+    
+    /* Fix horizontal scrolling - MẠNH HƠN */
+    .container,
+    .section,
+    .cv-container,
+    .cv-content,
+    .cv-left,
+    .cv-right,
+    .achievement-content,
+    .services-content,
+    .home-content,
+    body,
+    html {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+        position: relative !important;
+    }
+    
+    /* Force single column layout */
+    .home-content,
+    .cv-content,
+    .achievement-content,
+    .services-content {
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .section-services {
+        padding: 0 !important;
+    }
+    .info-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 cột */
+        gap: 1.2rem 0.8rem !important; /* Dọc 1.2rem, ngang 0.8rem */
+        margin-bottom: 2rem !important;
+    }
+    /* Container width fix */
+    .container {
+        width: 100% !important;
+        padding: 0 12px !important;
+        margin: 0 auto !important;
+    }
+    
+    /* Section padding fix */
+    .section {
+        padding: 9rem 12px 2rem !important;
+        min-height: auto !important;
+    }
+    
+    .section-education {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+    
+    /* Contact info */
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+        margin: 1.5rem 0;
+    }
+    
+    .contact-info p {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+}
+
+/* ============================================
+   THÊM FIX CHO 375px (iPhone 6/7/8)
+   ============================================ */
+@media (max-width: 375px) {
+    .home-img {
+        width: 260px !important;
+        height: 260px !important;
+    }
+    
+    .home-text h1 {
+        font-size: 2.9rem !important;
+    }
+}
