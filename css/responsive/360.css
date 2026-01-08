@@ -1,0 +1,75 @@
+/* ============================================
+   360px - SMALL MOBILE RESPONSIVE
+   ============================================ */
+
+@media (max-width: 360px) {
+    /* Global */
+    html {
+        font-size: 55% !important;
+    }
+    
+    /* Home Section - HÌNH VUÔNG */
+    .home-img {
+        width: 280px !important;
+        height: 280px !important;
+        margin: 0 auto 1.5rem !important;
+        scale: 1 !important;
+    }
+    
+    .home-img img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 30% !important;
+        box-shadow: 0 0 25px rgba(63, 215, 235, 0.4) !important;
+        transition: 0.4s ease !important;
+    }
+    
+    .home-text h1 {
+        font-size: 2.6rem !important;
+    }
+    
+    /* Education Section */
+    .profile-image {
+        width: 130px !important;
+        height: 130px !important;
+    }
+    
+    .cv-left,
+    .cv-right {
+        padding: 1.5rem 1rem !important;
+    }
+    
+    /* Services Section */
+    .service-row {
+        padding: 1.2rem;
+    }
+    
+    /* Achievement Section */
+    .box-content {
+        padding: 1.2rem;
+    }
+    
+    /* Fix horizontal scrolling */
+    .container,
+    .section,
+    .cv-container,
+    .cv-content,
+    .cv-left,
+    .cv-right,
+    .achievement-content,
+    .services-content,
+    .home-content {
+        overflow-x: hidden !important;
+    }
+    
+    /* Force single column layout */
+    .home-content,
+    .cv-content,
+    .achievement-content,
+    .services-content {
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+    }
+}
