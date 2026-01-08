@@ -600,8 +600,20 @@ html, body {
         font-size: 55% !important;
     }
     
+    /* Home Section - GIỮ NGUYÊN HÌNH VUÔNG */
     .home-img {
-        scale: 0.5;
+        width: 280px !important; /* Giảm nhẹ từ 320px */
+        height: 280px !important;
+        margin: 0 auto 1.5rem !important;
+    }
+    
+    .home-img img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 30% !important;
+        box-shadow: 0 0 25px rgba(63, 215, 235, 0.4) !important;
+        transition: 0.4s ease !important;
     }
     
     .home-text h1 {
@@ -625,22 +637,6 @@ html, body {
     .box-content {
         padding: 1.2rem;
     }
-}
-
-/* ---------- FIX FOR SPECIFIC IOS ISSUES ---------- */
-@supports (-webkit-touch-callout: none) {
-    /* CSS specific to iOS devices */
-    .section {
-        -webkit-overflow-scrolling: touch;
-    }
-    
-    .home-img img {
-        max-height: 60vh;
-    }
-}
-
-/* ---------- FIX FOR HORIZONTAL SCROLLING ---------- */
-@media (max-width: 480px) {
     .container,
     .section,
     .cv-container,
@@ -661,5 +657,58 @@ html, body {
         display: flex !important;
         flex-direction: column !important;
         flex-wrap: nowrap !important;
+    }
+    /* Home Section fixes - UPDATED */
+    .home-img {
+        width: 320px !important; /* Thêm width cố định */
+        height: 320px !important; /* Thêm height cố định */
+        margin: 0 auto 2rem !important;
+        scale: 1 !important; /* Bỏ scale */
+    }
+    
+    .home-img img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 30% !important;
+        box-shadow: 0 0 35px rgba(63, 215, 235, 0.4) !important;
+        transition: 0.4s ease !important;
+    }
+    
+    /* ... các style khác ... */
+}
+
+/* ---------- FIX FOR SPECIFIC IOS ISSUES ---------- */
+@supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */
+    .section {
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .home-img img {
+        max-height: 60vh;
+    }
+}
+
+/* ---------- FIX FOR HORIZONTAL SCROLLING ---------- */
+/* ============================================
+   FIX FOR MOBILE VIEWPORT ISSUES - UPDATED
+   ============================================ */
+
+/* ---------- 480px (Mobile) ---------
+
+/* ---------- 320px (Tiny Mobile) ---------- */
+@media (max-width: 320px) {
+    .home-img {
+        width: 250px !important; /* Nhỏ hơn cho màn hình rất nhỏ */
+        height: 250px !important;
+    }
+    
+    .home-img img {
+        box-shadow: 0 0 20px rgba(63, 215, 235, 0.4) !important;
+    }
+    
+    .home-text h1 {
+        font-size: 2.4rem !important;
     }
 }
